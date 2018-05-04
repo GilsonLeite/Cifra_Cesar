@@ -1,14 +1,14 @@
 import sys
 import string
-ALFABETO = string.ascii_uppercase
+ALPHABET = string.ascii_uppercase
 
 
 def criptografia(message, direcao, rot):
     result = ''
     for i in message:
-        if i in ALFABETO:
-            i_index = ALFABETO.index(i)
-            result += ALFABETO[(i_index + (direcao * rot)) % len(ALFABETO)]
+        if i in ALPHABET:
+            i_index = ALPHABET.index(i)
+            result += ALPHABET[(i_index + (direcao * rot)) % len(ALPHABET)]
         else:
             result += i
     return result
